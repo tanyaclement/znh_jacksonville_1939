@@ -2,9 +2,17 @@
 layout: page
 ---
 
+ {%- assign format = site.data[page.manifest_name].manifest.items[0].items[0].items[0].body.type -%}
 {{ content }}
 
- <div id="uv" class="uv"></div>
+<p>Find the item page for <a href="{{ site.data[page.manifest_name].manifest.homepage[0].id }}">{{ site.data[page.manifest_name].manifest.homepage[0].label.en[0] }}</a> at <a href="{{ site.data[page.manifest_name].manifest.provider[0].id }}">{{ site.data[page.manifest_name].manifest.provider[0].label.en[0] }}</a>. </p>
+
+{% if site.data[page.manifest_name].manifest.items[0].items[0].items[0].body.id == "" %}
+  The media file is not available
+
+{% else %}
+  <div id="uv" {%- if format == "Audio" or format == "Sound" -%} class="uv-audio sticky" {%- else -%} class="uv-video sticky" {%- endif -%}  ></div>
+{% endif %}
 
 <script>
 
@@ -33,20 +41,33 @@ layout: page
 <table id="annotation-table"  class="table table-bordered table-dark">
   <thead>
     <tr>
-      <th style="width: 15%;">Time</th>
+      <th style="width: 20%;">Time</th>
       <th>Annotation</th>
       <th>Layer</th>
     </tr>
   </thead>
   <tbody>
     {%- for annotation_page in site.data[page.manifest_name].manifest.items[0].annotations -%}
-      {%- for annotation in site.data[page.manifest_name].canvas-1[annotation_page.label].items -%}
+      {% assign portions = annotation_page.id | split: '/' %}
+      {% assign real_slug = portions[7] | replace: ".json", "" %}
+      {%- for annotation in site.data[page.manifest_name].canvas-1[real_slug].items -%}
         <tr>
           {% assign timestamp_array = annotation.target.selector.t | split: ',' %}
           <td class="timestamp" data-timestamp="{{timestamp_array[0]}}"  data-sort="{{timestamp_array[0]}}">
-            {{timestamp_array[0] | divided_by: 60 | floor }}:{{timestamp_array[0] | modulo: 60 | ceil }}
+           {% assign seconds = timestamp_array[0] | times: 1 %}
+            {% if seconds >= 3600 %}
+              {{ seconds | divided_by: 3600 | floor }}:{{seconds | divided_by: 60 | modulo: 60 | floor | prepend: '00' | slice: -2, 2 }}:{{seconds | modulo: 60 | ceil | prepend: '00' | slice: -2, 2}} 
+            {% else %}
+              {{seconds | divided_by: 60 | modulo: 60 | floor }}:{{seconds | modulo: 60 | ceil | prepend: '00' | slice: -2, 2}} 
+            {% endif %}
             {% if timestamp_array[1] %}
-              - {{timestamp_array[1] | divided_by: 60 | floor }}:{{timestamp_array[1] | modulo: 60 | round }}
+              {% assign endseconds = timestamp_array[1] | times: 1 %}
+              - 
+                {% if endseconds >= 3600 %}
+                  {{ endseconds | divided_by: 3600 | floor }}:{{endseconds | divided_by: 60 | modulo: 60 | floor | prepend: '00' | slice: -2, 2 }}:{{endseconds | modulo: 60 | ceil | prepend: '00' | slice: -2, 2}} 
+                {% else %}
+                  {{endseconds | divided_by: 60 | modulo: 60 | floor }}:{{endseconds | modulo: 60 | ceil | prepend: '00' | slice: -2, 2}} 
+                {% endif %}
             {% endif %}
           </td>
           <td>{{annotation.body.value}}</td>

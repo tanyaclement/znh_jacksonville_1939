@@ -13,7 +13,7 @@ layout: default-nonav
  <p>
    <a href="https://tanyaclement.github.io/znh_jacksonville_1939/introduction">Introduction</a>
 <ul>
-<li><a href="https://tanyaclement.github.io/znh_jacksonville_1939/s1576-t86-243-june-18-1939-/">S1576, T86-243</a></li>
+<li><a href="https://tanyaclement.github.io/znh_jacksonville_1939/s1576-t86-243">S1576, T86-243</a></li>
 <li><a href="https://tanyaclement.github.io/znh_jacksonville_1939/s1576-t86-244-june-18-1939-/">S1576, T86-244</a></li>
 <li><a href="https://tanyaclement.github.io/znh_jacksonville_1939/s1576-t86-245/">S1576, T86-245</a></li>
 </ul>

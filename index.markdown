@@ -4,7 +4,7 @@
 
 layout: default-nonav
 ---
-<head> 
+
     <style> 
     td{ 
       border:0 none; 
@@ -16,7 +16,6 @@ layout: default-nonav
       */ 
     } 
     </style> 
-  </head> 
 <h3>
  <table cellpadding="0" cellspacing="0">
   <tr border="0">

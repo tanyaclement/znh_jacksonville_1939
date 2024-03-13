@@ -5,9 +5,9 @@
 layout: default-nonav
 ---
 <h3>
- <table cellpadding="0" cellspacing="0" border="0" border-color="transparent">
-  <tr>
-   <td valign="top" width="50%">
+ <table cellpadding="0" cellspacing="0" border="0">
+  <tr style="border-collapse: collapse; border: none;">
+   <td valign="top" width="50%" border=none>
 <p><b>Transcription and annotations</b> by Tanya Clement
 <br/><br/><b>Recordings</b> from the <a href="https://www.floridamemory.com/discover/audio/wpa.php">Works Progress Administration Recordings</a> collection from the Florida Memory Project.</p>
  <p>

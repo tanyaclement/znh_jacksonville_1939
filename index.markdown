@@ -4,10 +4,23 @@
 
 layout: default-nonav
 ---
+<head> 
+    <style> 
+    td{ 
+      border:0 none; 
+      /* You can also use:  
+      border-left:0; 
+      border-right:0; 
+      border-top:0; 
+      border-bottom:0; 
+      */ 
+    } 
+    </style> 
+  </head> 
 <h3>
- <table cellpadding="0" cellspacing="0" border="0" BGCOLOR=CCFFFF>
+ <table cellpadding="0" cellspacing="0">
   <tr border="0">
-   <td valign="top" width="50%" border="0">
+   <td valign="top" width="50%">
 <p><b>Transcription and annotations</b> by Tanya Clement
 <br/><br/><b>Recordings</b> from the <a href="https://www.floridamemory.com/discover/audio/wpa.php">Works Progress Administration Recordings</a> collection from the Florida Memory Project.</p>
  <p>
@@ -20,7 +33,7 @@ layout: default-nonav
   <a href="https://tanyaclement.github.io/znh_jacksonville_1939/term_index">Index</a>
  </p>
   </td>
-  <td width="50%" border="none"><p align="center"><img width="60%" height="60%" alt="Photographic prints of Zora Neale Hurston doing a crow dance." src="https://github.com/tanyaclement/znh_jacksonville_1939-1/assets/1213771/e5b95e0e-40ef-42fe-8946-feb54168adb0"/><br/>
+  <td width="50%"><p align="center"><img width="60%" height="60%" alt="Photographic prints of Zora Neale Hurston doing a crow dance." src="https://github.com/tanyaclement/znh_jacksonville_1939-1/assets/1213771/e5b95e0e-40ef-42fe-8946-feb54168adb0"/><br/>
   "Zora Neale Hurston Poses from a Crow Dance," by Prentiss Taylor, Beinecke Rare Book & Manuscript Library, 1935
   </p></td>
  </tr>

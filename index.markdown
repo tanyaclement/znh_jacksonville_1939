@@ -4,9 +4,8 @@
 
 layout: default-nonav
 ---
-
-    <style> 
-    td{ 
+  <style> 
+    .border { 
       border:0 none; 
       /* You can also use:  
       border-left:0; 
@@ -15,9 +14,9 @@ layout: default-nonav
       border-bottom:0; 
       */ 
     } 
-    </style> 
+    </style>
 <h3>
- <table cellpadding="0" cellspacing="0">
+<div class="border> <table cellpadding="0" cellspacing="0">
   <tr border="0">
    <td valign="top" width="50%">
 <p><b>Transcription and annotations</b> by Tanya Clement
@@ -37,5 +36,5 @@ layout: default-nonav
   </p></td>
  </tr>
  </table>
-
+</div>
 </h3>

@@ -5,7 +5,7 @@
 layout: default-nonav
 ---
 <h3>
- <table cellpadding="0" cellspacing="0" border="0">
+ <table cellpadding="0" cellspacing="0" border="0" border-color=transparent>
   <tr>
    <td valign="top" width="50%">
 <p><b>Transcription and annotations</b> by Tanya Clement
